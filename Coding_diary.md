@@ -1,4 +1,5 @@
-3. 
+3. `bin/rails routes`
+    - Created Resourceful Routing that can be seen with routes command
 2. `bin/rails generate model Article title:string body:text`
     - `bin/rails db:migrate`
     - `article = Article.new(title: "Hello Rails", body: "I am on Rails!")`
