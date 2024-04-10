@@ -21,12 +21,22 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
-    # Define allowed form parameters that can be sent to db
     def article_params
-      # require(:article) to raise ParameterMissing in absence of it
-      # permit(:title, :body) to raise ForbiddenAttributesError if other attributes
-      # beside :article and :title and :body are sent
       params.require(:article).permit(:title, :body)
     end
 end
