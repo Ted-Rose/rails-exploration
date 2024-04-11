@@ -1,4 +1,5 @@
-5. `bin/rails generate model Comment commenter:string body:text article:references`
+6. `bin/rails generate controller Comments`
+5. `bin/rails generate model Comment commenter:string body:text article:references` + `bin/rails db:migrate`
     - Create a Comment model to hold a reference to an article
 4. Site http://127.0.0.1:3000/articles/new is accessible from the browser if `app/views/articles/new.html.erb` is created even without defining `def new` controller in `app/controllers/articles_controller.rb` 
 3. `bin/rails routes`
