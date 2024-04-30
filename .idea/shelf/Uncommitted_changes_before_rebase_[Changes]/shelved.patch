@@ -1,0 +1,673 @@
+Index: app/helpers/articles_helper.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/helpers/articles_helper.rb b/app/helpers/articles_helper.rb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/helpers/articles_helper.rb	(date 1714475140609)
+@@ -0,0 +1,2 @@
++module ArticlesHelper
++end
+Index: app/models/concerns/visible.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/models/concerns/visible.rb b/app/models/concerns/visible.rb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/models/concerns/visible.rb	(date 1714475140609)
+@@ -0,0 +1,19 @@
++module Visible
++  extend ActiveSupport::Concern
++
++  VALID_STATUSES = ['public', 'private', 'archived']
++
++  included do
++    validates :status, inclusion: { in: VALID_STATUSES }
++  end
++
++  class_methods do
++    def public_count
++      where(status: 'public').count
++    end
++  end
++
++  def archived?
++    status == 'archived'
++  end
++end
+Index: app/helpers/comments_helper.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/helpers/comments_helper.rb b/app/helpers/comments_helper.rb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/helpers/comments_helper.rb	(date 1714475140609)
+@@ -0,0 +1,2 @@
++module CommentsHelper
++end
+Index: app/models/article.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/models/article.rb b/app/models/article.rb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/models/article.rb	(date 1714475140609)
+@@ -0,0 +1,10 @@
++class Article < ApplicationRecord
++  include Visible
++
++  # deopendent: :destroy ensuras that when an article is deleted
++  # all its comments are also deleted
++  has_many :comments, dependent: :destroy
++
++  validates :title, presence: true
++  validates :body, presence: true, length: { minimum: 10 }
++end
+Index: Gemfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>source \"https://rubygems.org\"\n\nruby \"3.3.0\"\n\n# Bundle edge Rails instead: gem \"rails\", github: \"rails/rails\", branch: \"main\"\ngem \"rails\", \"~> 7.1.3\", \">= 7.1.3.2\"\n\n# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]\ngem \"sprockets-rails\"\n\n# Use sqlite3 as the database for Active Record\ngem \"sqlite3\", \"~> 1.4\"\n\n# Use the Puma web server [https://github.com/puma/puma]\ngem \"puma\", \">= 5.0\"\n\n# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]\ngem \"importmap-rails\"\n\n# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]\ngem \"turbo-rails\"\n\n# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]\ngem \"stimulus-rails\"\n\n# Build JSON APIs with ease [https://github.com/rails/jbuilder]\ngem \"jbuilder\"\n\n# Use Redis adapter to run Action Cable in production\ngem \"redis\", \">= 4.0.1\"\n\n# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]\n# gem \"kredis\"\n\n# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]\n# gem \"bcrypt\", \"~> 3.1.7\"\n\n# Windows does not include zoneinfo files, so bundle the tzinfo-data gem\ngem \"tzinfo-data\", platforms: %i[ windows jruby ]\n\n# Reduces boot times through caching; required in config/boot.rb\ngem \"bootsnap\", require: false\n\n# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]\n# gem \"image_processing\", \"~> 1.2\"\n\ngroup :development, :test do\n  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem\n  gem \"debug\", platforms: %i[ mri windows ]\nend\n\ngroup :development do\n  # Use console on exceptions pages [https://github.com/rails/web-console]\n  gem \"web-console\"\n\n  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]\n  # gem \"rack-mini-profiler\"\n\n  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]\n  # gem \"spring\"\nend\n\ngroup :test do\n  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]\n  gem \"capybara\"\n  gem \"selenium-webdriver\"\nend\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Gemfile b/Gemfile
+--- a/Gemfile	(revision a9e4acfcb49544b0bbc5d92def4e4198923921b0)
++++ b/Gemfile	(date 1714475140608)
+@@ -36,7 +36,9 @@
+ # gem "bcrypt", "~> 3.1.7"
+ 
+ # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+-gem "tzinfo-data", platforms: %i[ windows jruby ]
++group :development, :test do
++  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
++end
+ 
+ # Reduces boot times through caching; required in config/boot.rb
+ gem "bootsnap", require: false
+@@ -44,9 +46,9 @@
+ # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+ # gem "image_processing", "~> 1.2"
+ 
++# Gemfile
+ group :development, :test do
+-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+-  gem "debug", platforms: %i[ mri windows ]
++  gem 'debug', platforms: [:mri, :mingw, :mswin, :x64_mingw]
+ end
+ 
+ group :development do
+Index: app/models/comment.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/models/comment.rb b/app/models/comment.rb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/models/comment.rb	(date 1714475140609)
+@@ -0,0 +1,5 @@
++class Comment < ApplicationRecord
++  include Visible
++
++  belongs_to :article
++end
+Index: test/models/comment_test.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/models/comment_test.rb b/test/models/comment_test.rb
+new file mode 100644
+--- /dev/null	(date 1714475140612)
++++ b/test/models/comment_test.rb	(date 1714475140612)
+@@ -0,0 +1,7 @@
++require "test_helper"
++
++class CommentTest < ActiveSupport::TestCase
++  # test "the truth" do
++  #   assert true
++  # end
++end
+Index: test/models/article_test.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/models/article_test.rb b/test/models/article_test.rb
+new file mode 100644
+--- /dev/null	(date 1714475140612)
++++ b/test/models/article_test.rb	(date 1714475140612)
+@@ -0,0 +1,7 @@
++require "test_helper"
++
++class ArticleTest < ActiveSupport::TestCase
++  # test "the truth" do
++  #   assert true
++  # end
++end
+Index: Coding_diary.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Coding_diary.md b/Coding_diary.md
+new file mode 100644
+--- /dev/null	(date 1714475140607)
++++ b/Coding_diary.md	(date 1714475140607)
+@@ -0,0 +1,17 @@
++8. Now if article or comment status is `archived` it is not displayed
++7. ` bin/rails generate migration AddStatusToArticles status:string ` + `bin/rails generate migration AddStatusToComments status:string`
++    - Added status to Articles and Comments
++6. `bin/rails generate controller Comments`
++5. `bin/rails generate model Comment commenter:string body:text article:references` + `bin/rails db:migrate`
++    - Create a Comment model to hold a reference to an article
++4. Site http://127.0.0.1:3000/articles/new is accessible from the browser if `app/views/articles/new.html.erb` is created even without defining `def new` controller in `app/controllers/articles_controller.rb`
++3. `bin/rails routes`
++    - Created Resourceful Routing that can be seen with routes command
++2. `bin/rails generate model Article title:string body:text`
++    - `bin/rails db:migrate`
++    - `article = Article.new(title: "Hello Rails", body: "I am on Rails!")`
++    - `article.save`
++    - `article`
++1. `bin/rails generate controller Articles index --skip-routes`
++    - Created ArticlesController and its index action
++    - Now visit http://localhost:3000/articles, and see our text displayed!
+\ No newline at end of file
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># README\n\nThis README would normally document whatever steps are necessary to get the\napplication up and running.\n\nThings you may want to cover:\n\n* Ruby version\n\n* System dependencies\n\n* Configuration\n\n* Database creation\n\n* Database initialization\n\n* How to run the test suite\n\n* Services (job queues, cache servers, search engines, etc.)\n\n* Deployment instructions\n\n* ...\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision a9e4acfcb49544b0bbc5d92def4e4198923921b0)
++++ b/README.md	(date 1714475140608)
+@@ -1,24 +1,3 @@
+ # README
+ 
+-This README would normally document whatever steps are necessary to get the
+-application up and running.
+-
+-Things you may want to cover:
+-
+-* Ruby version
+-
+-* System dependencies
+-
+-* Configuration
+-
+-* Database creation
+-
+-* Database initialization
+-
+-* How to run the test suite
+-
+-* Services (job queues, cache servers, search engines, etc.)
+-
+-* Deployment instructions
+-
+-* ...
++My first rails app made to learn Ruby on Rails by following official [guide](https://guides.rubyonrails.org/getting_started.html)
+\ No newline at end of file
+Index: db/migrate/20240411064443_add_status_to_comments.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/db/migrate/20240411064443_add_status_to_comments.rb b/db/migrate/20240411064443_add_status_to_comments.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/db/migrate/20240411064443_add_status_to_comments.rb	(date 1714475140611)
+@@ -0,0 +1,5 @@
++class AddStatusToComments < ActiveRecord::Migration[7.1]
++  def change
++    add_column :comments, :status, :string
++  end
++end
+Index: db/migrate/20240411064442_add_status_to_articles.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/db/migrate/20240411064442_add_status_to_articles.rb b/db/migrate/20240411064442_add_status_to_articles.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/db/migrate/20240411064442_add_status_to_articles.rb	(date 1714475140611)
+@@ -0,0 +1,5 @@
++class AddStatusToArticles < ActiveRecord::Migration[7.1]
++  def change
++    add_column :articles, :status, :string
++  end
++end
+Index: db/migrate/20240411062029_create_comments.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/db/migrate/20240411062029_create_comments.rb b/db/migrate/20240411062029_create_comments.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/db/migrate/20240411062029_create_comments.rb	(date 1714475140611)
+@@ -0,0 +1,11 @@
++class CreateComments < ActiveRecord::Migration[7.1]
++  def change
++    create_table :comments do |t|
++      t.string :commenter
++      t.text :body
++      t.references :article, null: false, foreign_key: true
++
++      t.timestamps
++    end
++  end
++end
+Index: db/migrate/20240409120405_create_articles.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/db/migrate/20240409120405_create_articles.rb b/db/migrate/20240409120405_create_articles.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/db/migrate/20240409120405_create_articles.rb	(date 1714475140611)
+@@ -0,0 +1,10 @@
++class CreateArticles < ActiveRecord::Migration[7.1]
++  def change
++    create_table :articles do |t|
++      t.string :title
++      t.text :body
++
++      t.timestamps
++    end
++  end
++end
+Index: db/schema.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/db/schema.rb b/db/schema.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/db/schema.rb	(date 1714475140611)
+@@ -0,0 +1,33 @@
++# This file is auto-generated from the current state of the database. Instead
++# of editing this file, please use the migrations feature of Active Record to
++# incrementally modify your database, and then regenerate this schema definition.
++#
++# This file is the source Rails uses to define your schema when running `bin/rails
++# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
++# be faster and is potentially less error prone than running all of your
++# migrations from scratch. Old migrations may fail to apply correctly if those
++# migrations use external dependencies or application code.
++#
++# It's strongly recommended that you check this file into your version control system.
++
++ActiveRecord::Schema[7.1].define(version: 2024_04_11_064443) do
++  create_table "articles", force: :cascade do |t|
++    t.string "title"
++    t.text "body"
++    t.datetime "created_at", null: false
++    t.datetime "updated_at", null: false
++    t.string "status"
++  end
++
++  create_table "comments", force: :cascade do |t|
++    t.string "commenter"
++    t.text "body"
++    t.integer "article_id", null: false
++    t.datetime "created_at", null: false
++    t.datetime "updated_at", null: false
++    t.string "status"
++    t.index ["article_id"], name: "index_comments_on_article_id"
++  end
++
++  add_foreign_key "comments", "articles"
++end
+Index: test/controllers/comments_controller_test.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/controllers/comments_controller_test.rb b/test/controllers/comments_controller_test.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/test/controllers/comments_controller_test.rb	(date 1714475140611)
+@@ -0,0 +1,7 @@
++require "test_helper"
++
++class CommentsControllerTest < ActionDispatch::IntegrationTest
++  # test "the truth" do
++  #   assert true
++  # end
++end
+Index: test/controllers/articles_controller_test.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/controllers/articles_controller_test.rb b/test/controllers/articles_controller_test.rb
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/test/controllers/articles_controller_test.rb	(date 1714475140611)
+@@ -0,0 +1,7 @@
++require "test_helper"
++
++class ArticlesControllerTest < ActionDispatch::IntegrationTest
++  # test "the truth" do
++  #   assert true
++  # end
++end
+Index: app/controllers/comments_controller.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/controllers/comments_controller.rb b/app/controllers/comments_controller.rb
+new file mode 100644
+--- /dev/null	(date 1714475140608)
++++ b/app/controllers/comments_controller.rb	(date 1714475140608)
+@@ -0,0 +1,19 @@
++class CommentsController < ApplicationController
++  def create
++    @article = Article.find(params[:article_id])
++    @comment = @article.comments.create(comment_params)
++    redirect_to article_path(@article)
++  end
++
++  def destroy
++    @article = Article.find(params[:article_id])
++    @comment = @article.comments.find(params[:id])
++    @comment.destroy
++    redirect_to article_path(@article), status: :see_other
++  end
++
++  private
++    def comment_params
++      params.require(:comment).permit(:commenter, :body, :status)
++    end
++end
+Index: app/controllers/articles_controller.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/controllers/articles_controller.rb b/app/controllers/articles_controller.rb
+new file mode 100644
+--- /dev/null	(date 1714475140608)
++++ b/app/controllers/articles_controller.rb	(date 1714475140608)
+@@ -0,0 +1,49 @@
++class ArticlesController < ApplicationController
++  def index
++    @articles = Article.all
++  end
++
++  def show
++    @article = Article.find(params[:id])
++  end
++
++  def new
++    @article = Article.new
++  end
++
++  def create
++    @article = Article.new(article_params)
++
++    if @article.save
++      redirect_to @article
++    else
++      render :new, status: :unprocessable_entity
++    end
++  end
++
++  def edit
++    @article = Article.find(params[:id])
++  end
++
++  def update
++    @article = Article.find(params[:id])
++
++    if @article.update(article_params)
++      redirect_to @article
++    else
++      render :edit, status: :unprocessable_entity
++    end
++  end
++
++  def destroy
++    @article = Article.find(params[:id])
++    @article.destroy
++
++    redirect_to root_path, status: :see_other
++  end
++
++  private
++    def article_params
++      params.require(:article).permit(:title, :body, :status)
++    end
++end
+Index: test/fixtures/articles.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/fixtures/articles.yml b/test/fixtures/articles.yml
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/test/fixtures/articles.yml	(date 1714475140611)
+@@ -0,0 +1,9 @@
++# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
++
++one:
++  title: MyString
++  body: MyText
++
++two:
++  title: MyString
++  body: MyText
+Index: test/fixtures/comments.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/fixtures/comments.yml b/test/fixtures/comments.yml
+new file mode 100644
+--- /dev/null	(date 1714475140611)
++++ b/test/fixtures/comments.yml	(date 1714475140611)
+@@ -0,0 +1,11 @@
++# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
++
++one:
++  commenter: MyString
++  body: MyText
++  article: one
++
++two:
++  commenter: MyString
++  body: MyText
++  article: two
+Index: app/views/comments/_form.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/comments/_form.html.erb b/app/views/comments/_form.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140610)
++++ b/app/views/comments/_form.html.erb	(date 1714475140610)
+@@ -0,0 +1,17 @@
++<%= form_with model: [ @article, @article.comments.build ] do |form| %>
++  <p>
++    <%= form.label :commenter %><br>
++    <%= form.text_field :commenter %>
++  </p>
++  <p>
++    <%= form.label :body %><br>
++    <%= form.text_area :body %>
++  </p>
++  <p>
++    <%= form.label :status %><br>
++    <%= form.select :status, Visible::VALID_STATUSES, selected: 'public' %>
++  </p>
++  <p>
++    <%= form.submit %>
++  </p>
++<% end %>
+Index: app/views/comments/_comment.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/comments/_comment.html.erb b/app/views/comments/_comment.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140610)
++++ b/app/views/comments/_comment.html.erb	(date 1714475140610)
+@@ -0,0 +1,18 @@
++<% unless comment.archived? %>
++  <p>
++    <strong>Commenter:</strong>
++    <%= comment.commenter %>
++  </p>
++
++  <p>
++    <strong>Comment:</strong>
++    <%= comment.body %>
++  </p>
++
++  <p>
++    <%= link_to "Destroy Comment", [comment.article, comment], data: {
++                  turbo_method: :delete,
++                  turbo_confirm: "Are you sure?"
++                } %>
++  </p>
++<% end %>
+Index: app/views/articles/edit.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/articles/edit.html.erb b/app/views/articles/edit.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/views/articles/edit.html.erb	(date 1714475140609)
+@@ -0,0 +1,3 @@
++<h1>Edit Article</h1>
++
++<%= render "form", article: @article %>
+Index: app/views/articles/index.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/articles/index.html.erb b/app/views/articles/index.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/views/articles/index.html.erb	(date 1714475140609)
+@@ -0,0 +1,15 @@
++<h1>Articles</h1>
++
++Our blog has <%= Article.public_count %> articles and counting!
++
++<ul>
++  <% @articles.each do |article| %>
++    <% unless article.archived? %>
++      <li>
++        <%= link_to article.title, article %>
++      </li>
++    <% end %>
++  <% end %>
++</ul>
++
++<%= link_to "New Article", new_article_path %>
+Index: app/views/articles/_form.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/articles/_form.html.erb b/app/views/articles/_form.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140609)
++++ b/app/views/articles/_form.html.erb	(date 1714475140609)
+@@ -0,0 +1,30 @@
++<%# The below code is the same as our form in app/views/articles/new.html.erb,
++except that all occurrences of @article have been replaced with article.
++Thus we can refactor new.html.erb to simply this:
++<%= render "form", article: @article %>
++<%= form_with model: article do |form| %>
++  <div>
++    <%= form.label :title %><br>
++    <%= form.text_field :title %>
++    <% article.errors.full_messages_for(:title).each do |message| %>
++      <div><%= message %></div>
++    <% end %>
++  </div>
++
++  <div>
++    <%= form.label :body %><br>
++    <%= form.text_area :body %><br>
++    <% article.errors.full_messages_for(:body).each do |message| %>
++      <div><%= message %></div>
++    <% end %>
++  </div>
++
++  <div>
++    <%= form.label :status %><br>
++    <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
++  </div>
++
++  <div>
++    <%= form.submit %>
++  </div>
++<% end %>
+Index: app/views/articles/show.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/articles/show.html.erb b/app/views/articles/show.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140610)
++++ b/app/views/articles/show.html.erb	(date 1714475140610)
+@@ -0,0 +1,19 @@
++<li><%= link_to "See all blogs", articles_path %></li>
++
++<h1><%= @article.title %></h1>
++
++<p><%= @article.body %></p>
++
++<ul>
++  <li><%= link_to "Edit", edit_article_path(@article) %></li>
++  <li><%= link_to "Destroy", article_path(@article), data: {
++                    turbo_method: :delete,
++                    turbo_confirm: "Are you sure?"
++                  } %></li>
++</ul>
++
++<h2>Comments</h2>
++<%= render @article.comments %>
++
++<h2>Add a comment:</h2>
++<%= render 'comments/form' %>
+Index: app/views/articles/new.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/views/articles/new.html.erb b/app/views/articles/new.html.erb
+new file mode 100644
+--- /dev/null	(date 1714475140610)
++++ b/app/views/articles/new.html.erb	(date 1714475140610)
+@@ -0,0 +1,3 @@
++<h1>New Article</h1>
++
++<%= render "form", article: @article %>
+diff --git a/db/development.sqlite3 b/db/development.sqlite3
+new file mode 100644

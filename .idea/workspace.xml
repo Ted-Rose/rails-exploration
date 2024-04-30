@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9bdb9294-bac0-4eb8-848b-cb470c3b893d" name="Changes" comment="&#10;# Conflicts:&#10;#&#9;Coding_diary.md&#10;#&#9;db/schema.rb">
+      <change beforePath="$PROJECT_DIR$/Coding_diary.md" beforeDir="false" afterPath="$PROJECT_DIR$/Coding_diary.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/active-record-migrations" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ted-Rose&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="active-record-migrations" />
+                    <option name="lastUsedInstant" value="1714476414" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1714476396" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="rubyonrails-getting-started" />
+                    <option name="lastUsedInstant" value="1714471079" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ted-Rose/my-first-rails-app.git&quot;,
+    &quot;accountId&quot;: &quot;bb0a78e4-bdae-4838-97d5-a4bdfc6ce11a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2flNGB8wF7ZPIqAU7qeTlTnH94x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "active-record-migrations",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="db:migrate" />
+      <command value="bundle install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.my-first-rails-app">
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file enabled="true" id="RUBY_CUCUMBER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="true" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATHS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_EXAMPLE_MATCHES" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="LINE_NUMBER_EXAMPLE_IDS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="RackRunConfigurationType" factoryName="Rack">
+      <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RACK_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RACK_CONFIG_SETTINGS_ID NAME="PORT" VALUE="9292" />
+      <RACK_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RACK_CONFIG_SETTINGS_ID NAME="CONFIG_FILE" VALUE="config.ru" />
+      <RACK_CONFIG_SETTINGS_ID NAME="RACK_SERVER_TYPE" VALUE="Default" />
+      <RACK_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my-first-rails-app" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="my-first-rails-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: my-first-rails-app" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="my-first-rails-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: my-first-rails-app" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="my-first-rails-app" />
+      <predefined_log_file enabled="true" id="RUBY_RAKE" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-RM-241.14494.234" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9bdb9294-bac0-4eb8-848b-cb470c3b893d" name="Changes" comment="" />
+      <created>1714371606605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714371606605</updated>
+      <workItem from="1714371607675" duration="223000" />
+      <workItem from="1714372797020" duration="816000" />
+      <workItem from="1714470385715" duration="143000" />
+      <workItem from="1714470534793" duration="4328000" />
+      <workItem from="1714475340988" duration="1299000" />
+    </task>
+    <task id="LOCAL-00001" summary="Followed ActiveRecord guide till 2.6 Model Generators">
+      <option name="closed" value="true" />
+      <created>1714475024593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714475024593</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rubyonrails-getting-started (git merge --squash)">
+      <option name="closed" value="true" />
+      <created>1714475236159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714475236159</updated>
+    </task>
+    <task id="LOCAL-00003" summary="rubyonrails-getting-started (git merge --squash)">
+      <option name="closed" value="true" />
+      <created>1714475586944</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714475586944</updated>
+    </task>
+    <task id="LOCAL-00004" summary="rubyonrails-getting-started (git merge --squash)">
+      <option name="closed" value="true" />
+      <created>1714475937065</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714475937065</updated>
+    </task>
+    <task id="LOCAL-00005" summary="rubyonrails-getting-started (git merge --squash)">
+      <option name="closed" value="true" />
+      <created>1714476119618</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714476119618</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHELVE_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="Followed ActiveRecord guide till 2.6 Model Generators" />
+    <MESSAGE value="Squashed commit of the following:&#10;&#10;commit 00fa327e35962bb027e08c762a38e3d0ca56e020&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Fri Apr 12 11:10:34 2024 +0300&#10;&#10;    10 Deleting Comments&#10;&#10;commit b1cd9c9c107bdf3b34563de854a3a45e78f1eff6&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Fri Apr 12 10:28:42 2024 +0300&#10;&#10;    9.3 Using Concerns - status with concerns approach&#10;&#10;commit 07029584a4790eb520cafcecf0bb7895bab3c96b&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:53:30 2024 +0300&#10;&#10;    9.3 Using Concerns - status with no concerns used&#10;&#10;commit 4f21c36e5c0911531dcec23c7f6aa08bc74ee442&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:41:16 2024 +0300&#10;&#10;    9 Refactoring (templates)&#10;&#10;commit b238a7e10059f6723b0463f15b76cecee367540a&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:37:55 2024 +0300&#10;&#10;    8.3 Adding a Route for Comments and controller and UI&#10;&#10;commit 609ef3a6fdda813d6a8a6a27f257f8b7aa589d67&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:30:08 2024 +0300&#10;&#10;    8.2 Associating Models&#10;&#10;commit b1f7b33ed3f64f148fdf0d3e61c6df36b2930b2b&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:26:48 2024 +0300&#10;&#10;    8 Adding a Second Model&#10;&#10;commit 6a79c4b4f5f9617783cb1f82c023c4d554b62d99&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:20:04 2024 +0300&#10;&#10;    7.5 Deleting an Article&#10;&#10;commit 2ed7bd89c33daa06a1dccb588e2cb4f8845bbdf1&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:43:26 2024 +0300&#10;&#10;    7.4 Updating an Article | 7.4.1 Using Partials to Share View Code&#10;&#10;commit e1c0fcc313434c0a554a73599e97924a14e3fc1f&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:24:05 2024 +0300&#10;&#10;    7.3.3 Validations and Displaying Error Messages&#10;&#10;commit 846666fd3316d761b63754e709e2c1d59c57e5d9&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:10:03 2024 +0300&#10;&#10;    7.3.2 Using Strong Parameters | Enabling article creation dynamically&#10;&#10;commit 367e570ddf208f56e947a03adea1e6e65c09c030&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 19:32:58 2024 +0300&#10;&#10;    7.3 Creating a New Article&#10;&#10;commit 40c75bd9f525062d5a5b9c989c1797d303a9c332&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:26:49 2024 +0300&#10;&#10;    7.2 Resourceful Routing&#10;&#10;commit fe7f60dab1b467876118c0a6c0e5482f0105f3cf&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:17:15 2024 +0300&#10;&#10;    Showing a Single Article&#10;&#10;commit 2c568b3146b14eb973413026fe604bb4767d2d35&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:13:04 2024 +0300&#10;&#10;    Showed a list of articles in the view&#10;&#10;commit 7d3f2072e61adcde25891deb3efc508f7a52b981&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:11:01 2024 +0300&#10;&#10;    Saved few articles to db&#10;&#10;commit abef1f47422e87f5aefd34e84d8a07d75904b112&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:03:46 2024 +0300&#10;&#10;    Set up Application Home Page&#10;&#10;commit 475dbecd33fbec5d672da647210d47b26bbcc9fd&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 14:56:51 2024 +0300&#10;&#10;    Created ArticlesController and its index action&#10;&#10;commit 1423326d70ed392a3e2c34bf178e0d0cc06acd44&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 14:52:34 2024 +0300&#10;&#10;    Adjusted project to start the server locally&#10;" />
+    <MESSAGE value="Squashed commit of the following:&#10;&#10;commit 00fa327e35962bb027e08c762a38e3d0ca56e020&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Fri Apr 12 11:10:34 2024 +0300&#10;&#10;    10 Deleting Comments&#10;&#10;commit b1cd9c9c107bdf3b34563de854a3a45e78f1eff6&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Fri Apr 12 10:28:42 2024 +0300&#10;&#10;    9.3 Using Concerns - status with concerns approach&#10;&#10;commit 07029584a4790eb520cafcecf0bb7895bab3c96b&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:53:30 2024 +0300&#10;&#10;    9.3 Using Concerns - status with no concerns used&#10;&#10;commit 4f21c36e5c0911531dcec23c7f6aa08bc74ee442&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:41:16 2024 +0300&#10;&#10;    9 Refactoring (templates)&#10;&#10;commit b238a7e10059f6723b0463f15b76cecee367540a&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:37:55 2024 +0300&#10;&#10;    8.3 Adding a Route for Comments and controller and UI&#10;&#10;commit 609ef3a6fdda813d6a8a6a27f257f8b7aa589d67&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:30:08 2024 +0300&#10;&#10;    8.2 Associating Models&#10;&#10;commit b1f7b33ed3f64f148fdf0d3e61c6df36b2930b2b&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:26:48 2024 +0300&#10;&#10;    8 Adding a Second Model&#10;&#10;commit 6a79c4b4f5f9617783cb1f82c023c4d554b62d99&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Thu Apr 11 09:20:04 2024 +0300&#10;&#10;    7.5 Deleting an Article&#10;&#10;commit 2ed7bd89c33daa06a1dccb588e2cb4f8845bbdf1&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:43:26 2024 +0300&#10;&#10;    7.4 Updating an Article | 7.4.1 Using Partials to Share View Code&#10;&#10;commit e1c0fcc313434c0a554a73599e97924a14e3fc1f&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:24:05 2024 +0300&#10;&#10;    7.3.3 Validations and Displaying Error Messages&#10;&#10;commit 846666fd3316d761b63754e709e2c1d59c57e5d9&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 20:10:03 2024 +0300&#10;&#10;    7.3.2 Using Strong Parameters | Enabling article creation dynamically&#10;&#10;commit 367e570ddf208f56e947a03adea1e6e65c09c030&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Wed Apr 10 19:32:58 2024 +0300&#10;&#10;    7.3 Creating a New Article&#10;&#10;commit 40c75bd9f525062d5a5b9c989c1797d303a9c332&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:26:49 2024 +0300&#10;&#10;    7.2 Resourceful Routing&#10;&#10;commit fe7f60dab1b467876118c0a6c0e5482f0105f3cf&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:17:15 2024 +0300&#10;&#10;    Showing a Single Article&#10;&#10;commit 2c568b3146b14eb973413026fe604bb4767d2d35&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:13:04 2024 +0300&#10;&#10;    Showed a list of articles in the view&#10;&#10;commit 7d3f2072e61adcde25891deb3efc508f7a52b981&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:11:01 2024 +0300&#10;&#10;    Saved few articles to db&#10;&#10;commit abef1f47422e87f5aefd34e84d8a07d75904b112&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 15:03:46 2024 +0300&#10;&#10;    Set up Application Home Page&#10;&#10;commit 475dbecd33fbec5d672da647210d47b26bbcc9fd&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 14:56:51 2024 +0300&#10;&#10;    Created ArticlesController and its index action&#10;&#10;commit 1423326d70ed392a3e2c34bf178e0d0cc06acd44&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 9 14:52:34 2024 +0300&#10;&#10;    Adjusted project to start the server locally" />
+    <MESSAGE value="rubyonrails-getting-started (git merge --squash)" />
+    <MESSAGE value="&#10;# Conflicts:&#10;#&#9;Coding_diary.md&#10;#&#9;db/schema.rb&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;# Conflicts:&#10;#&#9;Coding_diary.md&#10;#&#9;db/schema.rb&#10;" />
+  </component>
+</project>
