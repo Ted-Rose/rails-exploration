@@ -5,6 +5,9 @@ Following https://github.com/gocardless/coach
 3. `rails db:seed`
 4. Outputs "hello world" when visiting http://localhost:3000/hello_world?login=example_login
 5. Outputs "Access denied" when visiting http://localhost:3000/hello_world
+6. `rails generate migration AddNameToUsers name:string` + `bin/rails db:migrate` + `rails db:seed`
+7. Created `hello_user.rb`
+8. Outputs "hello John" when visiting http://localhost:3000/hello_user?login=fast-john
 
 # active-record-migrations
 Following https://guides.rubyonrails.org/active_record_migrations.html

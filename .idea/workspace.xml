@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bdb9294-bac0-4eb8-848b-cb470c3b893d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/middleware/hello_world.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middleware/authentication.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middleware/hello_user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8e196368-bb37-4967-ba6f-b396a193f0f2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8e196368-bb37-4967-ba6f-b396a193f0f2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Coding_diary.md" beforeDir="false" afterPath="$PROJECT_DIR$/Coding_diary.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middleware/hello_world.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/hello_world.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
@@ -89,7 +89,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;active-record-migrations&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gocardless-coach&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tedis.rozenfelds/RubymineProjects/my-first-rails-app/app/middleware&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -105,6 +106,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/middleware" />
+    </key>
+  </component>
   <component name="RubyModuleManagerSettings">
     <option name="blackListedRootsPaths">
       <list>
@@ -370,6 +376,10 @@
       <workItem from="1714631372615" duration="135000" />
       <workItem from="1714631661699" duration="765000" />
       <workItem from="1714632735466" duration="2452000" />
+      <workItem from="1714637303262" duration="15000" />
+      <workItem from="1714637336838" duration="70000" />
+      <workItem from="1714637435705" duration="24000" />
+      <workItem from="1714637481177" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="Followed ActiveRecord guide till 2.6 Model Generators">
       <option name="closed" value="true" />
@@ -427,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714476912485</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Building chains">
+      <option name="closed" value="true" />
+      <created>1714637208704</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714637208704</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +462,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="rubyonrails-getting-started" />
+                        <option value="origin/gocardless-coach" />
                       </list>
                     </value>
                   </entry>
@@ -467,6 +485,7 @@
     <MESSAGE value="Stopped at 2.6 Model Generators" />
     <MESSAGE value="Squashed commit of the following:&#10;&#10;commit 2c19d7ae452987f3d4a0ac2a3b59b3449aed3de6&#10;Author: Tedis Rozenfelds &lt;trozenfelds@gocardless.com&gt;&#10;Date:   Tue Apr 30 14:33:51 2024 +0300&#10;&#10;    Stopped at 2.6 Model Generators&#10;" />
     <MESSAGE value="active-record-migrations (git merge --squash)" />
-    <option name="LAST_COMMIT_MESSAGE" value="active-record-migrations (git merge --squash)" />
+    <MESSAGE value="Building chains" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building chains" />
   </component>
 </project>

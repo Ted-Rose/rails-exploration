@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   match "/hello_world",
         to: Coach::Handler.new("HelloWorld"),
         via: :get
+
+  match "/hello_user",
+        to: Coach::Handler.new("HelloUser"),
+        via: :get
 end

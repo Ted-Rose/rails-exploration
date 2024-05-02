@@ -9,3 +9,7 @@
 #   end
 
 User.create!(login: 'example_login')
+User.create!([
+  { login: 'fast-john', name: 'John' },
+  { login: 'big-jane', name: 'Jane' }
+])
