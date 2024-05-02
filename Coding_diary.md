@@ -1,3 +1,11 @@
+# gocardless/coach
+Following https://github.com/gocardless/coach
+1. `rails generate model User`
+2. `rails generate migration AddLoginToUsers login:string`
+3. `rails db:seed`
+4. Outputs "hello world" when visiting http://localhost:3000/hello_world?login=example_login
+5. Outputs "Access denied" when visiting http://localhost:3000/hello_world
+
 # active-record-migrations
 Following https://guides.rubyonrails.org/active_record_migrations.html
 1. Connected to sqlite3 db via this URL: `jdbc:sqlite:storage/development.sqlite3`
