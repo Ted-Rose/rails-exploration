@@ -1,3 +1,20 @@
+# Exploring `tap` method in Ruby
+- Run pg container exposing it on port 5436 on host machine:
+`docker run --name rails-tests -p 5436:5432 -e POSTGRES_PASSWORD=password postgres`
+- Next time to start the container:
+`docker start rails-tests`
+- `rails db:create`
+- `rails db:migrate`
+- `rails db:seed`
+- To debug the connection run `rails db:connection_info`
+- Also helpful for debugging model creation:
+    - `rails console`
+    - `article = Article.create(title: "First Article", body: "This is the body of the first article.")`
+    - `puts article.errors.full_messages`
+- Explore `tap` method in Ruby by running these rake commands:
+    - `rails tap:scopes`
+    - `rails tap:article`
+
 # active-record-migrations
 Following https://guides.rubyonrails.org/active_record_migrations.html
 1. Connected to sqlite3 db via this URL: `jdbc:sqlite:storage/development.sqlite3`

@@ -11,16 +11,37 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_04_30_112727) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "commenter"
+    t.text "body"
+    t.bigint "article_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status"
+    t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
   create_table "customers_products", id: false, force: :cascade do |t|
-    t.integer "customer_id", null: false
-    t.integer "product_id", null: false
+    t.bigint "customer_id", null: false
+    t.bigint "product_id", null: false
   end
 
   create_table "products", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "price"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
@@ -29,5 +50,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_30_112727) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "articles"
   add_foreign_key "products", "users"
 end
